@@ -16,4 +16,7 @@ def current_weather():
 
 @app.route("/forecast", methods=["GET", "POST"])
 def forecast_weather():
-    return render_template("forecast.html")
+    weather_form = WeatherForm(request.form)
+
+    return render_template("forecast.html",
+        weather_form=weather_form)
