@@ -72,17 +72,7 @@ class OpenWeatherAPI():
             weather_list.append(daily_weather)
 
         return weather_list
-        # return DailyWeather(
-        #         description = result['weather'][0]['description'],
-        #         icon = result['weather'][0]['icon'],
-        #         temp = result['main']['temp'],
-        #         dt = result['dt'],
-        #         wind = result['wind']['speed'],
-        #         pressure = result['main']['pressure'],
-        #         humidity = result['main']['humidity'],
-        #         sunrise = result['sys']['sunrise'],
-        #         sunset = result['sys']['sunset']
-        #     )
+
 class DailyWeather():
     def __init__(self,
         description="",

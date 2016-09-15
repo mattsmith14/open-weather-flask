@@ -8,6 +8,15 @@
             {% else %}
                 C
             {% endif %}
+            {% if weather_item.temp_night %}
+                / 
+                {{weather_item.temp_night}} &deg;
+                {% if weather_form.units.data == "imperial" %}
+                    F
+                {% else %}
+                    C
+                {% endif %}
+            {% endif %}
         </h4>
         {{weather_item.description.title()}} on {{weather_item.dt|timestamp_to_date}}
         <table class="table table-striped">
