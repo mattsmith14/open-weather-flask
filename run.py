@@ -9,4 +9,3 @@ except ImportError:
     sys.exit()
 
 app.config.from_object(settings)
-app.run(debug=True)
